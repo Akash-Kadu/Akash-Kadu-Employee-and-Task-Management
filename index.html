@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee and Task Management</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <p> Employee and Task Management<p>
+    </header>
+    <main>
+        <section id="employees">
+            <div class="left-div">
+                <form id="employee-form">
+                    <h3>Add Employee</h3>
+
+                    <label for="employee-id">Id:</label>
+                    <input type="number" id="employee-id" required>
+
+                    <label for="employee-name">Name:</label>
+                    <input type="text" id="employee-name" required>
+
+                    <label for="employee-department">Role:</label>
+                    <input type="text" id="employee-department" required>
+
+                    <button type="submit" id="employee-submit-btn">Add Employee</button>
+                </form>
+            </div>
+            <div class="right-div">
+                <h3 style="text-align: center;"> List Of Employee </h3>
+                <table id="employee-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Role</th>
+                            <th>Delete button</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <!-- TR and TD will be added dynamically using JS -->
+
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <section id="tasks">
+            <form id="task-form">
+
+                <h3>Add Task</h3>
+
+                <label for="task-title">Title:</label>
+                <input type="text" id="task-title" required>
+
+                <label for="task-description">Description:</label>
+                <textarea id="task-description" required></textarea>
+                <div style="display: flex; justify-content: space-between;">
+                    <div>
+                        <label for="asignTo">Assign To:</label>
+                        <select id="asignTo" multiple>
+                            <!-- Options will be dynamically added here  -->
+                        </select>
+                    </div>
+                    <div style="padding-right: 200px;">
+                        <label for="Priority">Priority Of Task</label>
+                        <select id="priority">
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" id="task-submit-btn">Add Task</button>
+
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h3 style="text-align: center;">Tasks asigned</h3>
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Task Title</th>
+                    <th>Task Detail</th>
+                    <th>Priority</th>
+                    <th>Delete button</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <!-- Add rows and cells dynamically -->
+
+            </tbody>
+        </table>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
